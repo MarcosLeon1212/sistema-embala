@@ -1,0 +1,38 @@
+{{>partials/header}}
+
+    
+<form method="POST" action="/novotrabalho" name="sales" class="agendar">
+    <fieldset>
+    <legend>VALORES DE VENDA</legend>
+    DIGITE O VALOR DA VENDA:
+        <input type='text' placeholder="Digite o valor da venda" name="valor">
+        <br>
+        <input type="text" name="date" placeholder="DD/MM/AA"  onkeyup="formatDate(this)" maxlenght="10"><br>
+        <input type="submit" value="CONFIRMAR">
+    </fieldset>
+</form>
+   
+    <h1 class="titleText">Vendas</h1>
+<ul>
+{{#sales}}
+        <div class="editBorderList">
+        <li>
+            Venda:{{valor}}<br>
+            Data da Venda: {{date}}
+        </li>
+        <a href="/agenda/{{id}}/excluir">EXCLUIR</a>
+        </div>
+{{/sales}}
+
+</ul>
+
+<script>
+    function formatDate(input) {
+  var value = input.value;
+  value = value.replace(/\D/g, ""); 
+  value = value.replace(/^(\d{2})(\d)/, "$1/$2"); 
+  value = value.replace(/(\d{2})(\d)/, "$1/$2"); 
+  input.value = value; 
+}
+</script>
+{{>partials/footer}}

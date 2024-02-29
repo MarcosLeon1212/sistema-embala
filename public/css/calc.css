@@ -1,0 +1,81 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: aliceblue;
+}
+
+.header{
+    width: 100%;
+    height: 110px;
+    background-color: aliceblue;
+    border: solid black 2px;
+}
+
+.slogan{
+    width: 85px;
+    margin: 5px;
+}
+
+h3{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    color: rgba(177, 239, 255, 0.897);
+    text-shadow: 1px 1px 0 black;
+}
+
+.goCash{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    text-decoration: none;
+    color: gray;
+    display: flex;
+}
+
+.goCash:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    width: 12%;
+    font-size: 15px;
+    transition: all 0.8s ease;
+}
+
+.goStock{
+    position: absolute;
+    right: 330px;
+    top: 30px;
+    text-decoration: none;
+    color: gray;
+    display: flex;
+}
+
+.goStock:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    width: 12%;
+    font-size: 15px;
+    transition: all 0.8s ease;
+}
+
+.goTotal{
+    position: absolute;
+    right: 560px;
+    top: 30px;
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+
+.goTotal:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    width: 10%;
+    font-size: 15;
+    transition: all 0.8s ease;
+}

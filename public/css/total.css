@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: aliceblue;
+}
+
+.header{
+    border:solid black 2px
+}
+
+.titleText{
+    color: rgba(177, 239, 255, 0.897);
+    text-shadow: 1px 1px 0px black;
+    position: absolute;
+    left: 80px;
+    top: 20px;
+}
+
+.goControlCash{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+
+.goControlCash:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    width: 12%;
+    font-size: 15;
+    transition: all 0.8s ease;
+}
+
+.irCalc{
+    position: absolute;
+    right: 330px;
+    top: 30px;
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+
+.irCalc:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    width: 10%;
+    font-size: 15;
+    transition: all 0.8s ease;
+}
+
+.goStock{
+    position: absolute;
+    right: 560px;
+    top: 30px;
+    text-decoration: none;
+    color: rgb(94, 93, 93);
+}
+
+.goStock:hover{
+    border: solid 1px black;
+    background-color: blue;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+
+
+ul{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list{
+    border: solid 2px black;
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.exclude{
+    text-decoration: none;
+    color: gray;
+} 
+
+.exclude:hover{
+    background-color: blue;
+    color: white;
+    transition: all 0.8s ease;
+    border-radius: 20px;
+    border: solid 1px black;
+}
+    

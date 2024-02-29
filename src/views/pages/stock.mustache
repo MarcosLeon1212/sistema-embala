@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="css/stock.css">
+</head>
+<body>
+    <div class="header">
+        <img class="slogan" src="IMG/agenda.png"><h3 class="titleText">CONTROLE DE ESTOQUE</h3>
+        <a href="/" class="home">CONTROLE DE CAIXA</a>
+        <a href="/calculadora" class="calculadora">CALCULADORA</a>
+        <a href="/total" class="goTotal">VENDAS TOTAIS</a>
+        <form method="GET" action="/search">
+        <input type='search' style="width:300px; height:20px;" class="search" placeholder="PESQUISAR POR NOME" name="q">
+        </form>
+    </div>
+
+    <form method="POST" action="/novoestoque" name="novoestoque" class="novoestoque">
+        <fieldset>
+            <legend>Novo Produto</legend>
+            NOVO PRODUTO:<br>
+            <input type="text" placeholder="Digite um novo produto" name="product"><br>
+            NOME DO FORNECEDOR:<br>
+            <input type="text" placeholder="Digite o nome do fornecedor" name="supplier"><br>
+            VALOR PAGO:<br>
+            <input type="text" placeholder="Digite o valor pago" name="amountpaid"><br>
+            VALOR DE VENDA:<br>
+            <input type="text" placeholder="Digite o valor de venda" name="salevalue"><br>
+            ITENS EM ESTOQUE:<br>
+            <input type="text" placeholder="Digite os itens que tem no estoque" name="stockitens"><br>
+            ITENS NECESSÁRIOS NO ESTOQUE:<br>
+            <input type="text" placeholder="Digitem os itens necessários no estoque" name="minstockitens"><br><br>
+            <input type="submit" value="CONFIRMAR">
+        </fieldset>
+    </form>
+    {{#stock }}
+        
+        <div class="editBorderList">
+        <ul>
+        <li class="list">
+            Produto:{{product}}<br>
+            Fornecedor: {{supplier}}<br>
+            Valor pago: {{amountpaid}}R$<br>
+            Valor a vender:{{salevalue}}R$<br>
+            Itens em estoque:{{stockitens}}<br>
+            Itens necessários no estoque:{{minstockitens}}<br>
+        </li>
+        </ul>
+            <a href="/estoque/{{id}}/excluir" class="editButtonLink">EXCLUIR PRODUTO</a><br>
+            <a href="/editestoque/{{id}}/estoque" class="editButtonLink">EDITAR PRODUTO</a> <br><br>
+        </div>
+           
+        
+    {{/stock}}
+
+
+    <script>
+       
+    </script>
+</body>
