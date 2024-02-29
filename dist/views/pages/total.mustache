@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="css/total.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="IMG/agenda.png" style="width:90px; height:90px;"> <h3 class="titleText">VENDAS TOTAIS</h3>
+        <a href="/calculadora" class="irCalc">CALCULADORA</a>
+        <a href="/estoque" class="goStock">CONTROLE DE ESTOQUE</a>
+        <a href="/" class="goControlCash">CONTROLE DE CAIXA</a>
+        
+    </div>
+
+    <form method="POST" action="/novototal" name="total">
+        <fieldset>
+        <legend>CONFIRMAR VALOR TOTAL DO DIA</legend>
+        VALOR DE VENDAS TOTAIS DO DIA:<br>
+        <input type="text" name="valor" placeholder="Valor de vendas totais"><br>
+        DIGITE A DATA: <br>
+        <input type="text" name="data" placeholder="DD/MM/AA" onkeyup="formatDate(this)" maxlenght="10"><br>
+        <input type="submit" value="CONFIRMAR">
+        </fieldset>
+    </form>
+
+    <div class="editBorderList">
+    <ul>
+        {{#sales}}  
+            <li class="list">
+                Valor das Vendas: {{valor}}<br>
+                Data:{{data}}<br>
+                
+        <a href="/total/{{id}}/excluir" class="exclude">EXCLUIR</a><br><br>
+            </li>
+        {{/sales}}
+    </ul>
+    </div>
+    <script>
+        function formatDate(input) {
+  var value = input.value;
+  value = value.replace(/\D/g, ""); 
+  value = value.replace(/^(\d{2})(\d)/, "$1/$2"); 
+  value = value.replace(/(\d{2})(\d)/, "$1/$2"); 
+  input.value = value; 
+}
+    </script>
+
+</body>
