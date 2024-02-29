@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
-    
   },
   "keywords": [],
   "author": "",
@@ -17,6 +21,7 @@
     "@types/node": "^15.12.5",
     "@types/sequelize": "^4.28.19",
     "@types/validator": "^13.1.4",
+    "copyfiles": "^2.4.1",
     "gh-pages": "^6.1.1"
   },
   "dependencies": {
