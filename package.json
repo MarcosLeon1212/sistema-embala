@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.x"
+    "node": "20.9.0"
   },
   "scripts": {
     "start": "node dist/server.js",
@@ -22,7 +22,8 @@
     "@types/sequelize": "^4.28.19",
     "@types/validator": "^13.1.4",
     "copyfiles": "^2.4.1",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@types/cors": "^2.8.17",
