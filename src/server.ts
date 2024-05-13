@@ -10,7 +10,8 @@ import { createServer } from 'http';
 dotenv.config();
 
 const server = express();
-const app = createServer();
+
+
 
 server.use(cors());
 
