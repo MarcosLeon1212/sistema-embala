@@ -4,12 +4,13 @@ import mustache from 'mustache-express';
 import dotenv from 'dotenv';
 import mainRoutes from './routes/index';
 import cors from 'cors'
-
+import { createServer } from 'http';
 
 
 dotenv.config();
 
 const server = express();
+const app = createServer();
 
 server.use(cors());
 
